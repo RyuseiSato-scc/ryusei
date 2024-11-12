@@ -1,0 +1,43 @@
+{
+  "api": {
+    "ryuseipythonapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ryuseipythonlambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "ryuseipythonlambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_ryuseipythonlambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ryuseipythonlambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_ryuseipythonlambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ryuseipythonlambda"
+        }
+      ]
+    }
+  }
+}

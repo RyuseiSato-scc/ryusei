@@ -16,6 +16,10 @@
         "ryuseipythonlambda": {
           "deploymentBucketName": "amplify-ryuseipython-dev-6874f-deployment",
           "s3Key": "amplify-builds/ryuseipythonlambda-494b69756750484f6744-build.zip"
+        },
+        "ryuseipython2": {
+          "deploymentBucketName": "amplify-ryuseipython-dev-6874f-deployment",
+          "s3Key": "amplify-builds/ryuseipython2-4b32616766316c756751-build.zip"
         }
       },
       "api": {

@@ -9,6 +9,14 @@
           ],
           "category": "function",
           "resourceName": "ryuseipythonlambda"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ryuseipython2"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -16,6 +24,11 @@
     }
   },
   "function": {
+    "ryuseipython2": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "ryuseipythonlambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -23,6 +36,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_ryuseipython2_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ryuseipython2"
+        }
+      ]
+    },
+    "AMPLIFY_function_ryuseipython2_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ryuseipython2"
+        }
+      ]
+    },
     "AMPLIFY_function_ryuseipythonlambda_deploymentBucketName": {
       "usedBy": [
         {

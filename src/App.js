@@ -1,22 +1,25 @@
-import React, { useEffect } from "react";
+import logo from './logo.svg';
+import './App.css';
+import React, { useState, useEffect } from "react";
 
 function App() {
-  // FetchData関数を定義
-  const FetchData = () => {
-    fetch("https://1ws95y0j1h.execute-api.ap-northeast-1.amazonaws.com/dev")
-      .then((res) => res.json()) // JSON形式に変換
-      .then((json) => console.log(json)) // 取得したデータをコンソールに出力
-      .catch(() => alert("error")); // エラー発生時にアラート
-  };
+  const [data, setData] = useState();
 
-  // コンポーネントがマウントされた時にFetchDataを呼び出す
-  useEffect(() => {
-    FetchData();
-  }, []); // 空の依存配列で一度だけ実行される
+  fetch("https://op58ng3qyh.execute-api.ap-northeast-1.amazonaws.com/default/")
+    .then((res) => res.json()) // JSON形式に変換
+    .then((json) => setData(json))
+    .catch(() => alert("error")); // エラー発生時にアラート
 
+  console.log(data);
+  
   return (
-    <div>
-      <h1>APIデータの取得</h1>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+
+        <div>{data}</div>
+
+      </header>
     </div>
   );
 }

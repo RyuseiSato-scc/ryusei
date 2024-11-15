@@ -7,6 +7,13 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/test": {
+      "name": "/test",
+      "lambdaFunction": "ryuseipython2",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }
